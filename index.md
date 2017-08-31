@@ -62,7 +62,10 @@ if a task list item description begins with a parenthesis, you'll need to escape
 @github/lvdonghui hello, welcome
 
 ## Using emoji
-@octocat :+1: This is good
+@octocat :+1: This is a good idea
+***
+Let me do it
+
 
    
     
