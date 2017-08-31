@@ -47,8 +47,21 @@
 
 ## 附件功能
 ### 1. Github Flavored Markdown
-## relative links
+## Relative links
 ![又来一个美女](大美女.jpg)
+> 括号中添加github同一仓库中相对链接
+
+## Task lists(任务列表)
+-[x] first task
+-[ ] second task
+-[ ] \[sd] other task
+if a task list item description begins with a parenthesis, you'll need to escape it with `\`：
+`-[] \(Optional) task description`
+
+## Mentioning users and teams(提及用户和团队)
+@lvdonghui hello, welcome
+
+
 
 
    
