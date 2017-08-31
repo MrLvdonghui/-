@@ -11,6 +11,7 @@
 **粗体字** `**text**`
 *斜体字* `*text*`
 [链接](http://www.baidu.com) `[text](linkurl)`
+~~删除线~~ `~~text~~`
 
 ## 列表
 ### 有序
@@ -46,7 +47,8 @@
 
 ## 附件功能
 ### 1. Github Flavored Markdown
-
+## relative links
+![又来一个美女](美女.jpg)
 
 
    
