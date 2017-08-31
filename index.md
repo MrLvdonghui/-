@@ -59,7 +59,7 @@ if a task list item description begins with a parenthesis, you'll need to escape
 `-[] \(Optional) task description`
 
 ## Mentioning users and teams(提及用户和团队)
-@lvdonghui hello, welcome
+@github/lvdonghui hello, welcome
 
 
 
