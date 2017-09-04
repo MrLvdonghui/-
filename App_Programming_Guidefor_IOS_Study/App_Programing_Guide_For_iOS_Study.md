@@ -6,6 +6,6 @@ Apps need to work with the iOS to ensure that deliver a great user experience.Be
 ## App Are Expected to Support Key Features
 > 我的理解为应用程序的资源配置和数据配置：如图标，启动图，本地国际化语言资源和其他数据配置（配置应用程序的相关行为属性）
 
-相关章节笔记:[Expected App Behaviors(程序的预期行为)](ExpectedAppBehaviosStudy.md)
+相关章节笔记:[Expected App Behaviors(程序的预期行为)](Expected_App_Behaviors_study.md)
 
 
