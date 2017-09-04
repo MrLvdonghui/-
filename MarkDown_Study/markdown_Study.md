@@ -1,9 +1,10 @@
 # Mark Down 学习笔记
 ## 头部
-   # header \<h1\>
-   ## header2 \<h2\ >
-   ### header3 \<h3\ >
-   ###### header6 \<h4\>
+
+# header \<h1\>
+## header2 \<h2\>
+### header3 \<h3\>
+###### header6 \<h4\>
 `# header`   
 
 
@@ -63,8 +64,8 @@ if a task list item description begins with a parenthesis, you'll need to escape
 
 ## Using emoji
 @octocat :+1: This is a good idea
-***
-Let me do it
+
+#### Let me do it
 
 
    
