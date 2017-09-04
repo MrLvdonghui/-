@@ -1,9 +1,9 @@
 # Mark Down 学习笔记
 ## 头部
-   # header<h1>
-   ## header2<h2>
-   ### header3<h3>
-   ###### header6<h4>
+   # header \<h1\>
+   ## header2 \<h2\ >
+   ### header3 \<h3\ >
+   ###### header6 \<h4\>
 `# header`   
 
 
@@ -49,7 +49,7 @@
 ### 1. Github Flavored Markdown
 ## Relative links
 ![又来一个美女](大美女.jpg)
-> ![text](ralative links) or [text](ralative links)
+> \![text\]\(ralative links\) or \[text\]\(ralative links\)
 
 ## Task lists(任务列表)
 -[x] first task
