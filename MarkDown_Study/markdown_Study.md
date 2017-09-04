@@ -49,7 +49,7 @@
 ### 1. Github Flavored Markdown
 ## Relative links
 ![又来一个美女](大美女.jpg)
-> 括号中添加github同一仓库中相对链接
+> ![text](ralative links) or [text](ralative links)
 
 ## Task lists(任务列表)
 -[x] first task
