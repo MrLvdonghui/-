@@ -4,8 +4,8 @@
 # header \<h1\>
 ## header2 \<h2\>
 ### header3 \<h3\>
-###### header6 \<h4\>
-`# header`   
+###### header6 \<h6\>
+`# header` h几就几个#咯
 
 
 ## 文本
@@ -64,8 +64,8 @@ if a task list item description begins with a parenthesis, you'll need to escape
 
 ## Using emoji
 @octocat :+1: This is a good idea
-
-#### Let me do it
+___
+Let me do it
 
 
    
