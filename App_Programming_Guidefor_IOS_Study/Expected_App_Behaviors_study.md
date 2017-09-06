@@ -26,7 +26,7 @@
 > Nonlocalized resources include things like images, sound files, movies, and custom data files that your app uses. All of these files should be placed at the top level of your app bundle
 8. Subdirectories for localized resources (本地化资源的子目录)： 用于国际化 
 
-> 总结：初步了解应用程序包结构， For more information about the structure of an iOS app bundle, see [Bundle Programming Guide](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFBundles/Introduction/Introduction.html#//apple_ref/doc/uid/10000123i). For information about how to load resource files from your bundle, see [Resource Programming Guide](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/LoadingResources/Introduction/Introduction.html#//apple_ref/doc/uid/10000051i).
+> 总结：初步了解应用程序包结构， For more information about the structure of an iOS app bundle, see [Bundle Programming Guide](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFBundles/Introduction/Introduction.html#//apple_ref/doc/uid/10000123i) or [Bundle Programming Guide Study](Bundle_Programming_Guide_Study/Bundle_Programming_Guide_Study.md). For information about how to load resource files from your bundle, see [Resource Programming Guide](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/LoadingResources/Introduction/Introduction.html#//apple_ref/doc/uid/10000051i).
 
 ## 2、Supporting User Privacy (支持用户隐私)
 只有根据适用法律获得用户的知情同意才能访问用户或设备数据。此外，采取适当的步骤来保护用户和设备数据，并对您如何使用它们进行透明化。以下是您可以采取的一些最佳做法
