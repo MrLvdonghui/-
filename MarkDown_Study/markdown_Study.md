@@ -45,6 +45,7 @@
         print("true")
     }
 ```
+> `code` or ``` code ```
 
 ## 附件功能
 ### 1. Github Flavored Markdown
