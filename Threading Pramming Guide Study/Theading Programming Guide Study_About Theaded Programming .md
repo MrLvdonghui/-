@@ -42,6 +42,51 @@ When you create a new thread, you must specify an entry-point function (or an en
 > more information,see [Thread Management]()
 
 
+# Run Loops 
+A run loop is a piece of infrastructure used to manage events arriving asynchronously on a thread. A run loop works by monitoring one or more event sources for the thread. As events arrive, the system wakes up the thread and dispatches the events to the run loop, which then dispatches them to the handlers you specify. If no events are present and ready to be handled, the run loop puts the thread to sleep.
+
+You are not required to use a run loop with any threads you create but doing so can provide a better experience for the user. Run loops make it possible to create long-lived threads that use a minimal amount of resources. Because a run loop puts its thread to sleep when there is nothing to do, it eliminates the need for polling, which wastes CPU cycles and prevents the processor itself from sleeping and saving power.
+
+To configure a run loop, all you have to do is launch your thread, get a reference to the run loop object, install your event handlers, and tell the run loop to run. The infrastructure provided by OS X handles the configuration of the main thread’s run loop for you automatically. If you plan to create long-lived secondary threads, however, you must configure the run loop for those threads yourself.
+> Details about run loops and examples of how to use them are provided in [Run Loops]().
+> 通过监听事件，来唤起线程或者让线程休眠
+
+# Synchronization Tools
+* lock
+* conditions
+> (If you use operation objects, you can configure dependencies among your operation objects to sequence the execution of tasks, which is very similar to the behavior offered by conditions.
+* atomic operations(Swift 已经弃用)
+
+> For more information about the available synchronization tools, see [Synchronization Tools]()
+
+# Inter-thread Communication
+the fact that threads share the same process space means you have lots of options for communication.
+The techniques in this table are listed in order of increasing complexity
+* Direct messageing
+* Global variables,shared memory and objects
+* [conditions](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/ThreadSafety/ThreadSafety.html#//apple_ref/doc/uid/10000057i-CH8-SW4)
+* [Run loop sources](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html#//apple_ref/doc/uid/10000057i-CH16-SW1)
+* [Ports and sockets](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html#//apple_ref/doc/uid/10000057i-CH16-SW1)
+
+> 多线程需要注意的几点
+* Avoid Creating Threads Explicitly
+* Keep Your Threads Reasonably Busy： If you decide to create and manage threads manually
+> Before you start terminating idle threads, you should always record a set of baseline measurements of your applications current performance. After trying your changes, take additional measurements to verify that the changes are actually improving performance, rather than hurting it.
+* Avoid Shared Data Structures
+> [see Synchronization](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/ThreadSafety/ThreadSafety.html#//apple_ref/doc/uid/10000057i-CH8-SW1)
+* Threads and Your User Interface (无非就是注意主线程更新视图)
+> For more information about Cocoa thread safety, see [Thread Safety Summary](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/ThreadSafetySummary/ThreadSafetySummary.html#//apple_ref/doc/uid/10000057i-CH12-SW1). For more information about drawing in Cocoa, see [Cocoa Drawing Guide](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CocoaDrawingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40003290).
+* Be Aware of Thread Behaviors at Quit Time
+> A process runs until all non-detached threads have exited. By default, only the application’s main thread is created as non-detached, but you can create other threads that way as well. When the user quits an application, it is usually considered appropriate behavior to terminate all detached threads immediately, because the work done by detached threads is considered optional. If your application is using background threads to save data to disk or do other critical work, however, you may want to create those threads as non-detached to prevent the loss of data when the application exits
+> 就是说 一个进程是否退出和不分离的线程有关，进程退出，分离的线程也被终止，所以一些重要的task应该分配的不分离的线程中，即需要创建不分离的线程。
+> For information on creating joinable threads, see Setting the Detached State of a Thread. (only POSIX API support)
+* Handle Exceptions
+> Each thread has its own call stack, each thread is therefore responsible for catching its own exceptions
+* Terminate Your Threads Cleanly
+> The best way for a thread to exit is naturally, by letting it reach the end of its main entry point routine. Although there are functions to terminate threads immediately, those functions should be used only as a last resort. Terminating a thread before it has reached its natural end point prevents the thread from cleaning up after itself. If the thread has allocated memory, opened a file, or acquired other types of resources, your code may be unable to reclaim those resources, resulting in memory leaks or other potential problems.For more information on the proper way to exit a thread, see [Terminating a Thread](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/CreatingThreads/CreatingThreads.html#//apple_ref/doc/uid/10000057i-CH15-SW10)
+
+* Thread Safety in Libraries
+> 库开发人员需要注意多线程情况下的线程安全，使用库不需要关注，而库开发（架构师吧）需要关注啊！！！
 
 
 
