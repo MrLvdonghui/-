@@ -68,6 +68,7 @@ The techniques in this table are listed in order of increasing complexity
 * [Run loop sources](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html#//apple_ref/doc/uid/10000057i-CH16-SW1)
 * [Ports and sockets](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html#//apple_ref/doc/uid/10000057i-CH16-SW1)
 
+# Design Tips
 > 多线程需要注意的几点
 * Avoid Creating Threads Explicitly
 * Keep Your Threads Reasonably Busy： If you decide to create and manage threads manually
