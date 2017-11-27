@@ -51,7 +51,7 @@
 ### 1. Github Flavored Markdown
 ## Relative links
 ![又来一个美女](大美女.jpg)
-> \![text\]\(ralative links\) or \[text\]\(ralative links\)
+> \![text\]\(relative links\) or \[text\]\(relative links\)
 
 ## Task lists(任务列表)
 -[x] first task
